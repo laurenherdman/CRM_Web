@@ -7,11 +7,6 @@ get '/' do
 end
 
 get '/contacts' do
-	Contact.create("Yehuda", "Katz", {:email => "yehuda@example.com", :notes => "Developer"})
-  Contact.create("Mark", "Zuckerberg", {:email => "mark@facebook.com", :notes => "CEO"})
-  Contact.create("Sergey", "Brin", {:email => "sergey@google.com", :notes => "Co-Founder"})
-
-
 	erb :contacts
 end
 
@@ -20,5 +15,7 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-	puts params
+  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+  redirect to('/contacts')
+
 end
