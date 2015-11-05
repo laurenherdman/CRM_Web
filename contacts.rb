@@ -4,7 +4,7 @@
  	attr_accessor :first_name, :last_name, :email, :notes
 
  	@@contacts = []
- 	@@id = 1
+ 	@@id = 1000
 
  	def initialize(first_name, last_name, email, notes)
  		@id = @@id
@@ -25,4 +25,8 @@
 	def self.all
 		@@contacts
 	end
+
+	def self.find(contact_id)
+    @@contacts.find { |contact| contact.id == contact_id }
+  end
  end
