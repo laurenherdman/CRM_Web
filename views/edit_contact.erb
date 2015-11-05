@@ -1,0 +1,28 @@
+<h1><center>Edit a Contact</center></h1>
+
+
+
+<form class = "forms" action="/contacts/<%= @contact.id %>" method="post"align="center">
+	<table id="table1">
+		<tr>
+			<td><label for="first_name">First Name:</label></td>
+      <td> <input type="hidden" name="_method" value="put">
+  	<input type="text" name="first_name" value="<%= @contact.first_name %>"></td>
+		</tr>
+		<tr>
+  		<td><label for = "last_name">Last Name:</label></td>
+      <td><input type="text" name="last_name" value="<%= @contact.last_name %>"></td>
+  	</tr>
+  	<tr>
+  		<td><label for="email">Email:</label></td>
+      <td><input type="text" name="email" value="<%= @contact.email %>"></td>
+  	</tr>
+  	<tr>
+  		<td><label for="notes">Notes:</label></td>
+      <td><input type="text" name="note" value="<%= @contact.notes %>"></td>
+  	</tr>
+ 	</table>
+  	<input style = "text-align:center;" type="submit" name="Submit">
+
+
+</form>
