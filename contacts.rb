@@ -19,16 +19,10 @@
 
 	def self.create(first_name, last_name, email, notes)
 		new_contact = new(first_name, last_name, email, notes)
-		# new_contact.id = @@id
-		# @@id += 1
 		@@contacts << new_contact
 	end
 
 	def self.all
 		@@contacts
-	end
-
-	def full_name
-		"#{first_name} #{last_name}"
 	end
  end

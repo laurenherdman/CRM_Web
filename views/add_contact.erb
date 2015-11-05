@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Create New Contact</title>
-</head>
-<body>
-	<h1>Create new Contact</h1>
 
-<form action="/contacts" method="post">
-  <input type="text" name="first_name">
-  <input type="text" name="last_name">
-  <input type="text" name="email">
-  <input type="text" name="note">
-  <input type="submit" name="Submit">
+
+<center><h1>Create New Contact</h1></center>
+
+<form action="/contacts" method="post" align="center">
+	<table id="table1">
+		<tr>
+			<td><label for="first_name">First Name:</label></td>
+      <td><input type="text" name="first_name" placeholder="eg. John"></td>
+		</tr>
+		<tr>
+  		<td><label for = "last_name">Last Name:</label></td>
+      <td><input type="text" name="last_name" placeholder="eg. Smith"></td>
+  	</tr>
+  	<tr>
+  		<td><label for="email">Email:</label></td>
+      <td><input type="text" name="email" placeholder="eg. email@email.com"></td>
+  	</tr>
+  	<tr>
+  		<td><label for="notes">Notes:</label></td>
+      <td><input type="text" name="note" placeholder="eg. CEO"></td>
+  	</tr>
+ 	</table>
+  	<input style = "text-align:center;" type="submit" name="Submit">
+
+
 </form>
-</body>
-</html>

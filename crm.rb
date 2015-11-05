@@ -14,6 +14,14 @@ get '/contacts/new' do
 	erb :add_contact
 end
 
+get '/contacts/delete' do
+	erb :delete_contact
+end
+
+get '/contacts/modify' do
+	erb :modify_contact
+end
+
 post '/contacts' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
   redirect to('/contacts')
